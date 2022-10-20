@@ -78,6 +78,7 @@
 
     body{
         background-image: url(ev01.jpg);
+        background-position:center;
     }
 
     button{ 
