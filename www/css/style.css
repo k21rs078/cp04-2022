@@ -53,11 +53,15 @@
     #btnB {
         font-size: 20px;
         position:absolute; top:380px; left:45%; width:25%; height:60px; 
+        background-color: rgb(0, 247, 255);
+        color: green;
     }
 
     #btnC {
         font-size: 20px;
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
+        background-color: rgb(238, 183, 255);
+        color: green;
     }
     
     #minute {
@@ -77,7 +81,6 @@
     }
 
     button{ 
-        color: blue;
         font-family: Times;
         border-radius: 20px;
     }
