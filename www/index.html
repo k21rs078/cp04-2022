@@ -39,6 +39,10 @@
             $('#btnC').click(function(e) {
                 btnCClick(e);
             });
+
+            $('#btnD').click(function(e) {
+                btnCClick(e);
+            });
             init();
         });
 
@@ -162,6 +166,7 @@
             $('#btnA').prop('disabled', false);
             $('#btnB').prop('disabled', false);
             $('#btnC').prop('disabled', false);
+            $('#btnD').prop('disabled', false);
 
         }
 
@@ -179,6 +184,12 @@
             audio.play();
 
 
+        }
+
+        function alarm2(){
+            var aud=new Audio();
+            aud.src="sd.wav";
+            aud.play();
         }
 
         // ButtonAがクリックされた時の処理
@@ -201,6 +212,15 @@
             period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
             $("#time").html("経過時間： 0");
             $("#remain").html("残り時間： " + period);
+        }
+
+         // ButtonDがクリックされた時の処理
+        function btnDClick(e) {
+            alarm2();
+            active = false;
+            period = 60 * parseInt($("#minute").val()) + parseInt($("#second").val());
+            $("time").html("経過時間 : 0");
+            $("#remain").html("残り時間 : " + period);
         }
 
 
@@ -232,6 +252,7 @@
     <button id="btnA">Start</button>
     <button id="btnB">Stop</button>
     <button id="btnC">Set</button>
+    <button id="btnD">Sound</button>
     <input type="number" id="minute" value=0>
     <input type="number" id="second" value=15>
 </body>
